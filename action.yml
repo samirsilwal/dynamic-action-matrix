@@ -1,0 +1,16 @@
+name: 'Parse inputs'
+description: 'A gihhub action that parses string inputs with different delimiters'
+author: 'Samir Silwal'
+
+inputs:
+  value:
+    description: 'A string input with or without delimiter.'
+    required: true
+
+outputs:
+  parsed:
+    description: 'A parsed unput supported by job matrix to run furthers steps/jobs parallely.'
+
+runs:
+  using: 'node20'
+  main: 'index.js'
