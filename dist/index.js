@@ -27556,12 +27556,14 @@ try {
   }
 
   const splittedString = inputValueToSplit.split(inputDelimter || ',').filter(Boolean);
+  core.info(`Parsed string: ${splittedString}`);
 
   // Set an output value
   if (splittedString.length) {
     core.setOutput('parsed', splittedString);
     core.setOutput('is-empty', false);
   } else {
+    core.info('No values after parsing. Setting is-empty to true');
     core.setOutput('is-empty', true);
   }
 
