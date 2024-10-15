@@ -25,14 +25,17 @@ jobs:
         uses: ./
         with:
           value: ${{ github.event.inputs.value }}
+          run-all-default-values: 'run,all,ko,example'
       
       - name: Print parsed value
         run: echo "Parsed value is ${{ steps.parse.outputs.parsed }}"
     outputs:
       parsed: ${{ steps.parse.outputs.parsed }}
+      is-empty: ${{ steps.parse.outputs.is-empty }}
 
   matrix-example:
     needs: parse-input
+    if : ${{ needs.parse-input.outputs.is-empty == 'false' }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
