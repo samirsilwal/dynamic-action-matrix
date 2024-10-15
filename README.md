@@ -1,6 +1,6 @@
 # Parse Inputs GitHub Action
 
-A GitHub Action to parse string inputs using different delimiters.
+A GitHub Action to parse string inputs using different delimiters and provide dynamic input to job matrix.
 
 ## Description
 
