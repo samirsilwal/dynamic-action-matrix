@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: 20
 
@@ -36,7 +36,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        input: ${{ needs.parse-input.outputs.parsed }}
+        input: ${{ fromJson(needs.parse-input.outputs.parsed) }}
     name: Matrix example
 
     steps:
@@ -44,7 +44,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: 20
 
