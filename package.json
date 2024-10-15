@@ -1,5 +1,5 @@
 {
-  "name": "gh-input-parser",
+  "name": "dynamic-action-matrix",
   "version": "1.0.0",
   "description": "A GitHub Action that parses the input and outputs it to matrix runner",
   "main": "index.js",

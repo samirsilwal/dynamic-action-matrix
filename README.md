@@ -42,7 +42,7 @@ jobs:
 
       - name: Parse input values
         id: parse
-        uses: samirsilwal/gh-input-parser@v1
+        uses: samirsilwal/dynamic-action-matrix@v1.0.1
         with:
           value: 'item1,item2,item3'
           delimiter: ','
@@ -63,3 +63,6 @@ jobs:
 ### Additional Notes
 - If the `ALL` or `all` value is passed to the value input, the action will return the value set in run-all-default-values.
 - This action is useful for creating dynamic job matrices in your workflows.
+
+### Using the action with matrix see 
+- [Example with Matrix](https://github.com/samirsilwal/dynamic-action-matrix/blob/main/.github/workflows/main.yml)

@@ -1,5 +1,5 @@
-name: 'Parse inputs'
-description: 'A gihhub action that parses string inputs with different delimiters'
+name: 'Dynamic GH Actions matrix'
+description: 'A gihhub action that parses string inputs with different delimiters for matrix jobs.'
 author: 'Samir Silwal'
 
 inputs:
