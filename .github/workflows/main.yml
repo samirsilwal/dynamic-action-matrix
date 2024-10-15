@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: 20
 
@@ -28,4 +28,26 @@ jobs:
       
       - name: Print parsed value
         run: echo "Parsed value is ${{ steps.parse.outputs.parsed }}"
+    outputs:
+      parsed: ${{ steps.parse.outputs.parsed }}
+
+  matrix-example:
+    needs: parse-input
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        input: ${{ fromJson(needs.parse-input.outputs.parsed) }}
+    name: Matrix example
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Print value
+        run: echo "Value is ${{ matrix.input }}"
         
