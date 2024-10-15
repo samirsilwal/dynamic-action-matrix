@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       value:
-        description: 'From branch'
+        description: 'String Input'
         required: true
 
 jobs:
