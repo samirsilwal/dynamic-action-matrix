@@ -7,9 +7,21 @@ inputs:
     description: 'A string input with or without delimiter.'
     required: true
 
+  delimiter:
+    description: 'A delimiter to parse the input string.'
+    required: false
+    default: ','
+  
+  run-all-default-values:
+    description: 'A default value to return if `ALL`or `all` is passed as input.'
+    required: false
+
 outputs:
   parsed:
     description: 'A parsed unput supported by job matrix to run furthers steps/jobs parallely.'
+  
+  is-empty:
+    description: 'A boolean value to check if the output is empty or not.'
 
 runs:
   using: 'node20'
