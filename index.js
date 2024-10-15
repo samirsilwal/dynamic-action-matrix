@@ -2,12 +2,13 @@ const core = require('@actions/core');
 
 try {
   // Get input value
-  const exampleInput = core.getInput('value');
-  console.log(`Received input: ${exampleInput}`);
+  const inpputString = core.getInput('value');
+  const splittedString = inpputString.split(',');
 
   // Set an output value
-  const exampleOutput = `Output derived from ${exampleInput}`;
-  core.setOutput('parsed', exampleOutput);
+  const exampleOutput = `Output derived from ${splittedString}`;
+  console.log("🚀 ~ exampleOutput:", exampleOutput)
+  core.setOutput('parsed', splittedString);
 
 } catch (error) {
   core.setFailed(error.message);
