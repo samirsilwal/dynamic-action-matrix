@@ -66,3 +66,9 @@ jobs:
 
 ### Using the action with matrix see 
 - [Example with Matrix](https://github.com/samirsilwal/dynamic-action-matrix/blob/main/.github/workflows/main.yml)
+
+# Contributors
+
+<a href="https://github.com/samirsilwal/dynamic-action-matrix/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=samirsilwal/dynamic-action-matrix" />
+</a>
